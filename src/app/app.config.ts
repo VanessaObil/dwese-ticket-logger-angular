@@ -3,7 +3,8 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
-import { provideAnimations } from '@angular/platform-browser/animations'; // <-- Importar provideAnimations
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'; // <-- Importar provideAnimations
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -11,6 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
-    provideAnimations() // <-- Agregar esto aquí
+    provideAnimations(), provideAnimationsAsync() // <-- Agregar esto aquí
   ]
 };

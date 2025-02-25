@@ -1,18 +1,18 @@
 <header class="main-header">
-<div class="logo">
-    <a href="/">Vanessa Alejandra Obil Osorio</a>
-</div>
-<nav class="navigation">
-    <ul class="nav-links">
-        <li><a routerLink="/">Inicio</a></li>
-        <li><a routerLink="/regions">Comunidades Autónomas (prueba sin login)</a></li>
-        <li *ngIf="isLoggedIn"><a routerLink="/regions">Comunidades Autónomas</a></li>
-        <li><a routerLink="/login">Login</a></li>
-        <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
-    </ul>
-   
+  <div class="logo">
+      <a href="/">Vanessa Alejandra Obil Osorio</a>
+  </div>
+  <nav class="navigation">
+      <ul class="nav-links">
+          <li><a routerLink="/">Inicio</a></li>
+          <li><a routerLink="/regions">Comunidades Autónomas (prueba sin login)</a></li>
+          <li *ngIf="isLoggedIn"><a routerLink="/regions">Comunidades Autónomas</a></li>
+          <li><a routerLink="/login">Login</a></li>
+          <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+      </ul>
 
-    <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
-</nav>
 
-</header>
+      <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+  </nav>
+
+  </header>
