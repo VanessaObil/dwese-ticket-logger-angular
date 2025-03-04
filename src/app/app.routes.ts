@@ -5,6 +5,7 @@ import { authGuard } from './core/guards/auth.guard';
 import { HomeComponent } from './features/home/home.component';
 import { ForbiddenComponent } from './features/forbidden/forbidden.component';
 import { Error404Component } from './features/error404/error404.component';
+import { WeatherComponent } from './features/weather-app/weather-app.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,7 @@ export const routes: Routes = [
     component: RegionsComponent,
     canActivate:[authGuard],
   },
+  { path: 'weather', component: WeatherComponent },
   {
     path: 'forbidden', // Página 403
     component: ForbiddenComponent,
@@ -28,4 +30,5 @@ export const routes: Routes = [
     path: '**', // Ruta comodín para 404
     component: Error404Component,
   },
+
 ];

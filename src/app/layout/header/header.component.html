@@ -7,6 +7,7 @@
           <li><a routerLink="/">Inicio</a></li>
           <li><a routerLink="/regions">Comunidades Autónomas (prueba sin login)</a></li>
           <li *ngIf="isLoggedIn"><a routerLink="/regions">Comunidades Autónomas</a></li>
+          <li><a routerLink="/weather">Clima</a></li>
           <li><a routerLink="/login">Login</a></li>
           <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
       </ul>
